@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IronEdge Supply — Industrial Hardware</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Barlow',sans-serif;
+}
+
+body{
+  background:#0f1115;
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:#161a22;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#ff4c29;
+}
+
+nav a{
+  text-decoration:none;
+  color:#ccc;
+  margin-left:25px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ff4c29;
+}
+
+/* HERO */
+.hero{
+  height:75vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:55px;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:20px;
+  color:#ddd;
+}
+
+.cta-btn{
+  padding:12px 30px;
+  border:none;
+  background:#ff4c29;
+  color:#fff;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.cta-btn:hover{
+  background:#ff784f;
+  transform:scale(1.05);
+}
+
+/* PRODUCTS */
+.products{
+  padding:80px 60px;
+  text-align:center;
+}
+
+.products h2{
+  margin-bottom:40px;
+  font-size:32px;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.product-card{
+  background:#1b1f27;
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  transition:0.4s;
+}
+
+.product-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* IMAGE STYLE */
+.product-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.product-card:hover img{
+  transform:scale(1.08);
+}
+
+.details{
+  padding:20px;
+  text-align:left;
+}
+
+.brand{
+  font-size:14px;
+  color:#aaa;
+}
+
+.specs{
+  font-size:14px;
+  margin:5px 0;
+  color:#ccc;
+}
+
+.price{
+  color:#ff4c29;
+  font-weight:600;
+  margin:10px 0;
+}
+
+.cart-btn{
+  width:100%;
+  padding:10px;
+  border:none;
+  background:#ff4c29;
+  color:#fff;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.cart-btn:hover{
+  background:#ff784f;
+}
+
+/* DISCOUNT BADGE */
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:#ff4c29;
+  padding:6px 12px;
+  font-size:13px;
+  border-radius:20px;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#161a22;
+  margin-top:60px;
+  color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">IRON<span>EDGE</span></div>
+  <nav>
+    <a href="#">Power Tools</a>
+    <a href="#">Safety</a>
+    <a href="#">Electrical</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Built for Builders.</h1>
+    <p>Heavy-duty tools for serious work.</p>
+    <button class="cta-btn">Explore Tools</button>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Featured Products</h2>
+
+  <div class="product-grid">
+
+    <!-- DRILL -->
+    <article class="product-card" data-price="8999" data-original="11999">
+      <div class="badge"></div>
+      <img src="https://images.unsplash.com/photo-1581091870627-3a1a29d7484b?auto=format&fit=crop&w=800&q=80">
+      <div class="details">
+        <h3>Makita Impact Drill</h3>
+        <p class="brand">Brand: Makita</p>
+        <p class="specs">720W • 13mm Chuck</p>
+        <p class="price">₹8,999</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </article>
+
+    <!-- HELMET -->
+    <article class="product-card" data-price="2499" data-original="3499">
+      <div class="badge"></div>
+      <img src="https://images.unsplash.com/photo-1621607512022-6aecc4fed814?auto=format&fit=crop&w=800&q=80">
+      <div class="details">
+        <h3>Industrial Safety Helmet</h3>
+        <p class="brand">Brand: Hillson</p>
+        <p class="specs">ABS • Shock Resistant</p>
+        <p class="price">₹2,499</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </article>
+
+    <!-- EXTENSION BOARD -->
+    <article class="product-card" data-price="1499" data-original="1999">
+      <div class="badge"></div>
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80">
+      <div class="details">
+        <h3>Heavy Duty Extension Board</h3>
+        <p class="brand">Brand: Anchor</p>
+        <p class="specs">4 Socket • Surge Protected</p>
+        <p class="price">₹1,499</p>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <p>©️ 2026 IronEdge Supply. Industrial-grade reliability.</p>
+</footer>
+
+<script>
+document.querySelectorAll(".product-card").forEach(card => {
+  const price = card.dataset.price;
+  const original = card.dataset.original;
+  const discount = Math.round(((original - price) / original) * 100);
+  card.querySelector(".badge").textContent = discount + "% OFF";
+});
+</script>
+
+</body>
+</html>
